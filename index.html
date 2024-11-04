@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Joueurs de Foot</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .player-form, .player-list { margin-top: 20px; }
+        .player { display: flex; justify-content: space-between; margin: 10px 0; }
+        .player input { width: 100px; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestion des Joueurs de Foot</h1>
+
+    <div class="player-form">
+        <h2>Ajouter un joueur</h2>
+        <form id="addPlayerForm">
+            <input type="text" id="playerName" placeholder="Nom du joueur" required>
+            <input type="number" id="playerSpeed" placeholder="Vitesse" required min="0" max="100">
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+
+    <div class="player-list">
+        <h2>Liste des joueurs</h2>
+        <div id="playersContainer"></div>
+    </div>
+
+    <div class="team-section">
+        <h2>Répartition en équipes</h2>
+        <button onclick="distributeTeams()">Répartir les équipes</button>
+        <div id="teamsContainer"></div>
+    </div>    
+
+    <script src="app.js"></script>
+</body>
+</html>
